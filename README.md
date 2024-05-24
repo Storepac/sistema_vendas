@@ -1,7 +1,7 @@
 # sistema_vendas
- Sistema de controle de venda
+ Sistema de controle de venda em Python
+- Estudo de aprendizado
+- Em fase de teste
 
- - Estudo e aprendizagem
- - Breve mais atualizações
-
- Para iniciar o progreama basta executar o .exe "Venda Smart.exe" na pasta dist
+- Mais atualizações como:
+- Estoque, Cadastro de Clientes, Cadastro de produtos e integração entre eles
