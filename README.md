@@ -5,3 +5,5 @@
 
 - Mais atualizações como:
 - Estoque, Cadastro de Clientes, Cadastro de produtos e integração entre eles
+
+Para executar o progra basta entrar na pasta "dist" e executar o arquivo "Venda Smart.exe"
