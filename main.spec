@@ -1,45 +1,55 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+block_cipher = None
 
 a = Analysis(
     ['main.py'],
-    pathex=[],
+    pathex=['.'],
     binaries=[],
-    datas=[('assets/venda_smart_icon.ico', 'assets'),
-           ('assets/VendaSmart.png', 'assets'),
-           ('main.py', '.'),
-           ('interface.py', '.'),
-           ('operations.py', '.'),
-           ('db.py', '.')
+    datas=[
+        ('assets/venda_smart_icon.ico', 'assets'),
+        ('assets/VendaSmart.png', 'assets'),
+        ('main.py', '.'),
+        ('interface.py', '.'),
+        ('operations.py', '.'),
+        ('db.py', '.'),
+        ('c:/users/usuario/appdata/local/programs/python/python38/lib/site-packages/babel/locale-data', 'babel/locale-data'),
+        ('c:/users/usuario/appdata/local/programs/python/python38/lib/site-packages/babel/global.dat', 'babel')
     ],
-    hiddenimports=['babel.numbers'],
+    hiddenimports=['tkcalendar', 'ttkthemes', 'babel', 'babel.numbers', 'babel.dates', 'babel.core', 'babel.localedata'],
     hookspath=[],
-    hooksconfig={},
     runtime_hooks=[],
     excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
     noarchive=False,
-    optimize=0,
 )
-pyz = PYZ(a.pure)
+
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.datas,
     [],
+    exclude_binaries=True,
     name='Venda Smart',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    upx_exclude=[],
-    runtime_tmpdir=None,
     console=False,
     disable_windowed_traceback=False,
-    argv_emulation=False,
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-    icon='assets/venda_smart_icon.ico', 
+    icon='assets/venda_smart_icon.ico',
+)
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name='Venda Smart'
 )

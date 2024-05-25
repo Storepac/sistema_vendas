@@ -27,7 +27,7 @@ DefaultGroupName={#MyAppName}
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
 OutputBaseFilename={#MyAppName}
-SetupIconFile=C:\Users\Usuario\Desktop\sistema_vendas\dist\assets\venda_smart_icon.ico
+SetupIconFile=D:\Clientes\t4w\Venda Smart\sistema_vendas\dist\assets\venda_smart_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -39,9 +39,9 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Usuario\Desktop\sistema_vendas\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Usuario\Desktop\sistema_vendas\dist\assets\venda_smart_icon.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Usuario\Desktop\sistema_vendas\dist\assets\VendaSmart.png"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Clientes\t4w\Venda Smart\sistema_vendas\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Clientes\t4w\Venda Smart\sistema_vendas\dist\assets\venda_smart_icon.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Clientes\t4w\Venda Smart\sistema_vendas\dist\assets\VendaSmart.png"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
